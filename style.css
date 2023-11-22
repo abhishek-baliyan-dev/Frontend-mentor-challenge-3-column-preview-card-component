@@ -1,0 +1,116 @@
+:root {
+    --first-col-bg: hsl(31, 77%, 52%);
+    --second-col-bg: hsl(184, 100%, 22%);
+    --third-col-bg: hsl(179, 100%, 13%);
+    
+    --paragraph: hsla(0, 0%, 100%, 0.75);
+    --background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    display: block;
+}
+
+body {
+    font-size: .95rem;
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-family: 'Lexend Deca', sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.col {
+    padding: 3rem 1.8rem 3rem 2.6rem;
+}
+
+.first-col {
+    background-color: var(--first-col-bg);
+}
+
+.second-col {
+    background-color: var(--second-col-bg);
+}
+
+.third-col {
+    background-color: var(--third-col-bg);
+}
+
+.icon-img {
+    width: 64px;
+    height: auto;
+    margin-bottom: 2rem;
+}
+
+.icon-img img {
+    width: 100%;
+    height: auto;
+}
+
+h2 {
+    color: var(--background-headings-buttons);
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-family: 'Big Shoulders Display', sans-serif;
+    margin: 1rem 0;
+    font-weight: 400;
+}
+
+p {
+    color: var(--paragraph);
+    margin: 1.5rem 3.3rem 1.5rem 0;
+    line-height: 1.5;
+}
+
+button {
+    background-color: var(--background-headings-buttons);
+    border: none;
+    padding: 1rem 2.5rem;
+    border-radius: 2rem;
+    color: var(--first-col-bg);
+}
+
+@media screen and (min-width: 889px) {
+    main {
+        /* min-width: 80vw; */
+        flex-direction: row;
+
+        width: 889px;
+    }
+
+    .col {
+        padding: 3rem 1.8rem 3rem 2.6rem;
+    }
+
+    p {
+        margin-right: 1rem;
+    }
+
+    button {
+        margin-top: 4rem;
+        border: 2px solid var(--background-headings-buttons);
+    }
+
+    button:hover {
+        border: 2px solid var(--background-headings-buttons);
+        background-color: inherit;
+        color: var(--paragraph);
+        cursor: pointer;
+    }
+}
